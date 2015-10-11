@@ -58,11 +58,11 @@ def registration(country, phone_number):
         })
     else:
         confirmation_code = 42
-        with mail.connect() as conn:
-            msg = Message(subject='Confirm Code', recipients=[str(phone_number)],
-                          body='Your confirmaion code is: {}'.format(confirmation_code),
-                          sender='shnaiderpasha@gmail.com')
-            msg.send(conn)
+        # with mail.connect() as conn:
+        #     msg = Message(subject='Confirm Code', recipients=[str(phone_number)],
+        #                   body='Your confirmaion code is: {}'.format(confirmation_code),
+        #                   sender='shnaiderpasha@gmail.com')
+        #     msg.send(conn)
         return jsonify({
             'error': False,
             'number': str(phone_number),
