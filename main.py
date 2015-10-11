@@ -26,12 +26,14 @@ def registration(country, phone_number):
     if some_error:
         return jsonify({
             'error': True,
-            'blabla': 0
+            'reason': 'Something'
         })
     else:
         confirmation_code = 42
         return jsonify({
             'error': False,
+            'number': phone_number,
+            'country': country,
             'confirmation': confirmation_code
         })
 
