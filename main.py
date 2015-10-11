@@ -88,8 +88,8 @@ def confirmation(phone_number, confirmation_code):
         })
 
 
-@app.route('/confirmation/<phone_number>/<name>/<last_name>', methods=['GET', 'POST'])
-def confirmation(phone_number, name, last_name):
+@app.route('/register_name_last_name/<phone_number>/<name>/<last_name>', methods=['GET', 'POST'])
+def register_name_last_name(phone_number, name, last_name):
     some_error = False
     if some_error:
         return jsonify({
